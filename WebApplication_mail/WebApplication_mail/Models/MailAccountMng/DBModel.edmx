@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MailAddTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="使用者指名" Type="nchar" MaxLength="10" />
+          <Property Name="ふりがな" Type="nchar" MaxLength="10" />
+          <Property Name="アドレス" Type="nchar" MaxLength="10" />
+          <Property Name="パスワード" Type="nchar" MaxLength="10" />
+          <Property Name="登録日" Type="nchar" MaxLength="10" />
+          <Property Name="削除日" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="UserTable">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="氏名" Type="nchar" MaxLength="10" />
+          <Property Name="役職" Type="nchar" MaxLength="10" />
+          <Property Name="職場" Type="nchar" MaxLength="10" />
+          <Property Name="所属" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="MailAddTable" EntityType="Self.MailAddTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTable" EntityType="Self.UserTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MailAddTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="使用者指名" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ふりがな" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="アドレス" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="パスワード" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="登録日" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="削除日" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserTable">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="氏名" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="役職" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="職場" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="所属" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MailAddTable" EntityType="Self.MailAddTable" />
+          <EntitySet Name="UserTable" EntityType="Self.UserTable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+          <EntitySetMapping Name="MailAddTable">
+            <EntityTypeMapping TypeName="Database1Model.MailAddTable">
+              <MappingFragment StoreEntitySet="MailAddTable">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="使用者指名" ColumnName="使用者指名" />
+                <ScalarProperty Name="ふりがな" ColumnName="ふりがな" />
+                <ScalarProperty Name="アドレス" ColumnName="アドレス" />
+                <ScalarProperty Name="パスワード" ColumnName="パスワード" />
+                <ScalarProperty Name="登録日" ColumnName="登録日" />
+                <ScalarProperty Name="削除日" ColumnName="削除日" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTable">
+            <EntityTypeMapping TypeName="Database1Model.UserTable">
+              <MappingFragment StoreEntitySet="UserTable">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="氏名" ColumnName="氏名" />
+                <ScalarProperty Name="役職" ColumnName="役職" />
+                <ScalarProperty Name="職場" ColumnName="職場" />
+                <ScalarProperty Name="所属" ColumnName="所属" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="なし" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

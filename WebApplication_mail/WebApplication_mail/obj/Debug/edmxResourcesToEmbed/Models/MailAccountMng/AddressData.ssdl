@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AddressData.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AddressDataStoreContainer">
+    <EntitySet Name="Entity1" EntityType="AddressData.Store.Entity1" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Entity1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="使用者氏名" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ふりがな" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="アドレス" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="パスワード" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="転送先" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="登録日" Type="datetime" Nullable="false" />
+    <Property Name="削除日" Type="datetime" Nullable="false" />
+  </EntityType>
+</Schema>

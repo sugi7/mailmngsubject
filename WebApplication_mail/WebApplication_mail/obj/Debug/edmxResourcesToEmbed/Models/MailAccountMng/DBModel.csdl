@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MailAddTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="使用者指名" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ふりがな" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="アドレス" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="パスワード" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="登録日" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="削除日" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="氏名" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="役職" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="職場" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="所属" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MailAddTable" EntityType="Self.MailAddTable" />
+    <EntitySet Name="UserTable" EntityType="Self.UserTable" />
+  </EntityContainer>
+</Schema>

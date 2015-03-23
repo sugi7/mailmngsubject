@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AddressDataStoreContainer" CdmEntityContainer="AddressDataContainer">
+    <EntitySetMapping Name="Entity1">
+      <EntityTypeMapping TypeName="IsTypeOf(AddressData.Entity1)">
+        <MappingFragment StoreEntitySet="Entity1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="使用者氏名" ColumnName="使用者氏名" />
+          <ScalarProperty Name="ふりがな" ColumnName="ふりがな" />
+          <ScalarProperty Name="アドレス" ColumnName="アドレス" />
+          <ScalarProperty Name="パスワード" ColumnName="パスワード" />
+          <ScalarProperty Name="転送先" ColumnName="転送先" />
+          <ScalarProperty Name="登録日" ColumnName="登録日" />
+          <ScalarProperty Name="削除日" ColumnName="削除日" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

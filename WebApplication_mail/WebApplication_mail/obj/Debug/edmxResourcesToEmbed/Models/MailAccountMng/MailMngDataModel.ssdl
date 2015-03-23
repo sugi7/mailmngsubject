@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MailAcountMngTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="使用者指名" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="ふりがな" Type="nchar" MaxLength="10" />
+    <Property Name="アドレス" Type="nchar" MaxLength="10" />
+    <Property Name="パスワード" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="転送先" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="登録日" Type="date" />
+    <Property Name="削除日" Type="date" />
+  </EntityType>
+  <EntityContainer Name="DatabaseModelStoreContainer">
+    <EntitySet Name="MailAcountMngTable" EntityType="Self.MailAcountMngTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
