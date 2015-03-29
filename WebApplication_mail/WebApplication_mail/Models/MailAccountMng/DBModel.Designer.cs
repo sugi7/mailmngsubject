@@ -1,4 +1,4 @@
-﻿// T4 コード生成がモデル 'c:\users\昌大\documents\visual studio 2013\Projects\WebApplication_mail\WebApplication_mail\Models\MailAccountMng\DBModel.edmx' に対して有効です。 
+﻿// T4 コード生成がモデル 'C:\Users\昌大\Documents\Visual Studio 2013\Projects\WebApplication_mail\WebApplication_mail\Models\MailAccountMng\DBModel.edmx' に対して有効です。 
 // レガシ コード生成を有効にするには、'コード生成方法' デザイナー
 // プロパティの値を 'レガシ ObjectContext' に変更します。このプロパティは、デザイナーでモデルが開かれている場合に [プロパティ] ウィンドウ
 // で使用できます。

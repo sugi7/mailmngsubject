@@ -15,7 +15,7 @@ namespace WebApplication_mail.Models.MailAccountMng
     public partial class MailAddTable
     {
         public int Id { get; set; }
-        public string 使用者指名 { get; set; }
+        public string 使用者氏名 { get; set; }
         public string ふりがな { get; set; }
         public string アドレス { get; set; }
         public string パスワード { get; set; }

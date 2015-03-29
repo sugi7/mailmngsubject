@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Data.SqlClient;
+using Dapper;
+
 
 namespace WebApplication_mail.Models.MailAccountMng
 {
@@ -22,15 +24,8 @@ namespace WebApplication_mail.Models.MailAccountMng
 
         public void a()
         {
-            SqlIf db = new SqlIf();
+            var a = new SqlIf();
 
-            /* データベースオープン */
-            db.Open();
-
-            DataTable datatable1 = db.ReadTable1();
-            A = datatable1.Rows[0][0].ToString();
-
-            db.Close();
         }
     }
 }

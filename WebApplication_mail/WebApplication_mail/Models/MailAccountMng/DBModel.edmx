@@ -41,7 +41,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="使用者指名" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="使用者氏名" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="ふりがな" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="アドレス" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="パスワード" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
@@ -72,7 +72,7 @@
             <EntityTypeMapping TypeName="Database1Model.MailAddTable">
               <MappingFragment StoreEntitySet="MailAddTable">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="使用者指名" ColumnName="使用者指名" />
+                <ScalarProperty Name="使用者氏名" ColumnName="使用者指名" />
                 <ScalarProperty Name="ふりがな" ColumnName="ふりがな" />
                 <ScalarProperty Name="アドレス" ColumnName="アドレス" />
                 <ScalarProperty Name="パスワード" ColumnName="パスワード" />

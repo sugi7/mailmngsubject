@@ -39,7 +39,7 @@ namespace WebApplication_mail.Controllers
 
         public ActionResult AddInfo()
         {
-            var h = new ai.MailAdd();
+            var h = new WebApplication_mail.Models.MailAccountMng.MailAdd();
             ViewBag.hello = h.A;
 
             return View();

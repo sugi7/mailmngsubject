@@ -5,7 +5,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="使用者指名" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="使用者氏名" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="ふりがな" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="アドレス" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="パスワード" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />

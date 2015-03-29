@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database1" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Database1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MailAddTable" Member="MailAddTable2">
+    <Type Name="MailAddTable2">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="使用者氏名" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ふりがな" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="アドレス" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="パスワード" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="登録日" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="削除日" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Member="転送先" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTable" Member="UserTable2">
+    <Type Name="UserTable2">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="氏名" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="役職" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="職場" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="所属" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

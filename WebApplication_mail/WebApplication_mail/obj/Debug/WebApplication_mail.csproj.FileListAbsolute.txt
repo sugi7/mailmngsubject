@@ -72,3 +72,6 @@ c:\users\昌大\documents\visual studio 2013\Projects\WebApplication_mail\WebApp
 c:\users\昌大\documents\visual studio 2013\Projects\WebApplication_mail\WebApplication_mail\obj\Debug\WebApplication_mail.csprojResolveAssemblyReference.cache
 c:\users\昌大\documents\visual studio 2013\Projects\WebApplication_mail\WebApplication_mail\obj\Debug\WebApplication_mail.dll
 c:\users\昌大\documents\visual studio 2013\Projects\WebApplication_mail\WebApplication_mail\obj\Debug\WebApplication_mail.pdb
+C:\Users\昌大\Documents\Visual Studio 2013\Projects\WebApplication_mail\WebApplication_mail\bin\Dapper.dll
+C:\Users\昌大\Documents\Visual Studio 2013\Projects\WebApplication_mail\WebApplication_mail\bin\Dapper.pdb
+C:\Users\昌大\Documents\Visual Studio 2013\Projects\WebApplication_mail\WebApplication_mail\bin\Dapper.xml
