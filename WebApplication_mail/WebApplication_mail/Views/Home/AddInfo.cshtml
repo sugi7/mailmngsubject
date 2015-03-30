@@ -4,8 +4,8 @@
 
     /* データベース */
     var h = new WebApplication_mail.Models.MailAccountMng.SqlIf();
-    var Data = new MailAddTable2();
-
+    var Data = new AddressTable();
+        
     if(IsPost)
     {
         Data.使用者氏名 = Request["formSimei"];

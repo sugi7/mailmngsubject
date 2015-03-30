@@ -11,27 +11,59 @@ namespace WebApplication_mail.Models.MailAccountMng
 {
     public class SqlIf
     {
-        private static string basedir = AppDomain.CurrentDomain.BaseDirectory;
-        private static string connect = "Data Source=(LocalDB)\v11.0;AttachDbFilename=/" + basedir + "Database1.mdf/;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework";
-        
-        public void dbAddAdrs(MailAddTable2 AddData)
+
+        /* 追加アドレス情報 */
+        public void dbAddAdrs(AddressTable AddData)
         {
-            var db = new DataClasses1DataContext(connect);
+            DataClassesDataContext db = new DataClassesDataContext();
+            DateTime day = DateTime.Today;
 
-            MailAddTable2 Add = new MailAddTable2();
+            /* 登録日情報を設定 */
+            AddData.登録日 = day.Date;
 
-            db.MailAddTable2.InsertOnSubmit(Add);
+            db.AddressTable.InsertOnSubmit(AddData);
             db.SubmitChanges();
         }
 
+        /* 追加ユーザ情報 */
+        public void dbAddUser(UserTable AddData)
+        {
+            DataClassesDataContext db = new DataClassesDataContext();
+            DateTime day = DateTime.Today;
+
+            /* 登録日情報を設定 */
+            AddData.登録日 = day.Date;
+
+            db.UserTable.InsertOnSubmit(AddData);
+            db.SubmitChanges();
+        }
+
+        /*  */
         public void Read()
         {
-            
-            var db = new DataClasses1DataContext(connect);
+
+            DataClassesDataContext db = new DataClassesDataContext();
 
 //            var q = from s in db.MailAddTable w
         }
 
+        /*  */
+        public void dbUpdataAdrs()
+        {
+
+            DataClassesDataContext db = new DataClassesDataContext();
+
+            //            var q = from s in db.MailAddTable w
+        }
+
+        public void dbUpdataUser()
+        {
+
+            DataClassesDataContext db = new DataClassesDataContext();
+
+
+            //            var q = from s in db.MailAddTable w
+        }
     }
 
 }
