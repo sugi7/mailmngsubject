@@ -3,10 +3,10 @@
   <Table Name="dbo.UserTable" Member="UserTable">
     <Type Name="UserTable">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="氏名" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="役職" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="職場" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="所属" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="氏名" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="役職" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="職場" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="所属" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="登録日" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="削除日" Type="System.DateTime" DbType="Date" CanBeNull="true" />
     </Type>
@@ -14,8 +14,8 @@
   <Table Name="dbo.AddressTable" Member="AddressTable">
     <Type Name="AddressTable">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="使用者氏名" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="ふりがな" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="使用者氏名" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ふりがな" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="アドレス" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="転送先" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="登録日" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />

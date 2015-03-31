@@ -37,7 +37,7 @@ namespace WebApplication_mail.Controllers
             return View();
         }
 
-        public ActionResult AddInfo()
+        public ActionResult AddAdrsInfo()
         {
             var h = new WebApplication_mail.Models.MailAccountMng.MailAdd();
             ViewBag.hello = h.A;
@@ -45,5 +45,20 @@ namespace WebApplication_mail.Controllers
             return View();
         }
 
+        public ActionResult AddUser()
+        {
+            return View();
+        }
+
+        public ActionResult AdrsList()
+        {
+            return View();
+        }
+
+        public ActionResult EditAdrsInfo(int id)
+        {
+            ViewBag.id = id;
+            return View();
+        }
     }
 }

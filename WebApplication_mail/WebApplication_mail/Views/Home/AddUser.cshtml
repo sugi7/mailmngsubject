@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "利用者情報登録";
+
+    /* データベース */
+    var h = new WebApplication_mail.Models.MailAccountMng.SqlIf();
+    var Data = new UserTable();
+
+    if (IsPost)
+    {
+        Data.氏名 = Request["formSimei"];
+        Data.所属 = Request["formSyozoku"];
+        Data.職場 = Request["formPlace"];
+        Data.役職 = Request["formClass"];
+
+        /* DB追加 */
+        h.dbAddUser(Data);
+    }
+}
+
+<h2>利用者情報登録</h2>
+
+<form action="" method="post">
+    <p>氏名(必須)　　 ：<input type="text" name="formSimei" /></p>
+    <p>所属　　 　　　：<input type="text" name="formSyozoku" /></p>
+    <p>職場　　　　　 ：<input type="text" name="formPlace" /></p>
+    <p>役職　　　 　　：<input type="text" name="formClass" /></p>
+
+    <p><input type="submit" value="登録"></p>
+
+</form>

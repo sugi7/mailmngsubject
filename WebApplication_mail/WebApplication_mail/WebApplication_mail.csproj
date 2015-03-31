@@ -253,7 +253,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Hello.cshtml" />
-    <Content Include="Views\Home\AddInfo.cshtml" />
+    <Content Include="Views\Home\AddAdrsInfo.cshtml" />
+    <Content Include="Views\Home\AddUser.cshtml" />
+    <Content Include="Views\Home\EditAdrsInfo.cshtml" />
+    <Content Include="Views\Home\AdrsList.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

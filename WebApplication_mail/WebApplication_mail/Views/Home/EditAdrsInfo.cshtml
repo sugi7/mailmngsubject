@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "EditAdrsInfo";
+    /* データベース */
+    var h = new WebApplication_mail.Models.MailAccountMng.SqlIf();
+
+    var Data = h.AdrRead(ViewBag.id);
+
+    var EdtData = new AddressTable();
+    
+    if (IsPost)
+    {
+        EdtData.使用者氏名 = Request["formSimei"];
+        EdtData.ふりがな = Request["formFurigana"];
+        EdtData.アドレス = Request["formAddress"];
+        EdtData.パスワード = Request["formPass"];
+        EdtData.転送先 = Request["formFw"];
+        var a = Request["del"];
+        
+        if(a == null)
+        { 
+            /* DB編集 */
+            h.dbUpdataAdrs(EdtData,ViewBag.id);
+        }
+        else
+        {
+            /* DB削除 */
+            h.dbUpdataAdrs(ViewBag.id);
+            
+        }
+    }  
+}
+
+<h2>利用者情報編集</h2>
+
+<form action="" method="post">
+
+    <p><input type="checkbox" name="del">レコードを削除する</p>
+
+    @foreach(var inp in Data)
+    { 
+        <p>氏名(必須)　　 ：<input type="text" name="formSimei" value=@inp.使用者氏名 /></p>
+        <p>ふりがな　　　：<input type="text" name="formFurigana" value=@inp.ふりがな /></p>
+        <p>アドレス(必須) ：<input type="text" name="formAddress" value=@inp.アドレス /></p>
+        <p>パスワード　　：<input type="text" name="formPass" value=@inp.パスワード /></p>
+        <p>転送先　　　　：<input type="text" name="formFw" value=@inp.転送先 /></p>
+    }
+
+    <p><input type="submit" value="編集"></p>
+
+</form>

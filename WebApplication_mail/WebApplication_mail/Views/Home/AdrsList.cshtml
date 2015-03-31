@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "AdrsList";
+
+    /* データベース */
+    var h = new WebApplication_mail.Models.MailAccountMng.SqlIf();
+
+    var Data = h.AdrRead();
+    
+    if (IsPost)
+    {
+        Data = h.AdrRead(Request["formWord"]);
+    }
+    
+}
+
+<h2>登録アドレス情報</h2>
+
+<form action="" method="post">
+    <p>検索キーワード：<input type="text" name="formWord" /></p>
+    <p><input type="submit" value="表示"></p>
+</form>
+
+<ol>
+    @foreach (var row in Data)
+    {
+//        <li><a href="~/Views/Home/EditAdrsInfo.cshtml">@row.使用者氏名,@row.ふりがな,@row.アドレス,@row.パスワード,@row.転送先,@row.登録日</a></li>
+        <li>@Html.ActionLink(@row.使用者氏名 + " , " + @row.ふりがな + " , " + @row.アドレス + " , " + @row.パスワード + " , " + @row.転送先 + " , " + @row.登録日, "EditAdrsInfo", "Home", new { id = @row.Id }, null )</li>
+    }
+</ol>

@@ -150,7 +150,7 @@ namespace WebApplication_mail
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_氏名", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_氏名", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string 氏名
 		{
 			get
@@ -170,7 +170,7 @@ namespace WebApplication_mail
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_役職", DbType="VarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_役職", DbType="NVarChar(50)")]
 		public string 役職
 		{
 			get
@@ -190,7 +190,7 @@ namespace WebApplication_mail
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_職場", DbType="VarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_職場", DbType="NVarChar(50)")]
 		public string 職場
 		{
 			get
@@ -210,7 +210,7 @@ namespace WebApplication_mail
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_所属", DbType="VarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_所属", DbType="NVarChar(50)")]
 		public string 所属
 		{
 			get
@@ -360,7 +360,7 @@ namespace WebApplication_mail
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_使用者氏名", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_使用者氏名", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
 		public string 使用者氏名
 		{
 			get
@@ -380,7 +380,7 @@ namespace WebApplication_mail
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ふりがな", DbType="VarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ふりがな", DbType="NVarChar(50)")]
 		public string ふりがな
 		{
 			get

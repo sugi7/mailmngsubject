@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "メールアカウント情報登録";
+
+    /* データベース */
+    var h = new WebApplication_mail.Models.MailAccountMng.SqlIf();
+    var Data = new AddressTable();
+        
+    if(IsPost)
+    {
+        Data.使用者氏名 = Request["formSimei"];
+        Data.ふりがな = Request["formFurigana"];
+        Data.アドレス = Request["formAddress"];
+        Data.パスワード = Request["formPass"];
+
+        /* DB追加 */
+        h.dbAddAdrs(Data);
+    }
+}
+
+<h2>メールアカウント情報登録</h2>
+
+<form action="" method="post">
+    <p>氏名(必須)　　 ：<input type="text" name="formSimei" /></p>
+    <p>ふりがな　　　：<input type="text" name="formFurigana" /></p>
+    <p>アドレス(必須) ：<input type="text" name="formAddress" /></p>
+    <p>パスワード　　：<input type="text" name="formPass" /></p>
+    <p>転送先　　　　：<input type="text" name="formFw" /></p>
+
+    <p><input type="submit" value="登録"></p>
+
+</form>
+
